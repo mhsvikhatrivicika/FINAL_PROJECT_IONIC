@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-item color="tertiary">
+    <ion-buttons fill="clear" slot="start" color="light"> Riwayat </ion-buttons>
+  </ion-item>
+</ion-header>
+
+<ion-content class="body" [fullscreen]="true">
+  <ion-card *ngFor="let key of history" class="bg-image" color="light">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">Mata Kuliah</ion-col>
+          <ion-col size="auto">:</ion-col>
+          <ion-col>{{ key.course }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">Lab</ion-col>
+          <ion-col size="auto">:</ion-col>
+          <ion-col>{{key.room}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">Tanggal</ion-col>
+          <ion-col size="auto">:</ion-col>
+          <ion-col>{{ key.dayIndo}}, {{ key.dateIndo }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">Jam</ion-col>
+          <ion-col size="auto">:</ion-col>
+          <ion-col>{{ key.hoursIndo }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">Total Mahasiswa</ion-col>
+          <ion-col size="auto">:</ion-col>
+          <ion-col>{{ key.total }}</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-button (click)="DetailAbsensi(key.id_tms, key.dateSql)">Detail...</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

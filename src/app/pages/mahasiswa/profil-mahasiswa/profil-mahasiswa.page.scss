@@ -1,0 +1,42 @@
+ion-content {
+    ion-item-group {
+        margin: 0 0 5% 0;
+        ion-item {
+            .keluar {
+                font-weight: 700;
+            }
+            ion-label {
+                font-weight: 300;
+                padding-left: 5%;
+            }
+        }
+    }
+    ion-card {
+        background: url('../../../../assets/img/background-biru.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        margin: 6% 8% 5% 8%;
+        padding: 0;
+        ion-card-content {
+            padding: 3px;
+            ion-grid {
+                padding: 0;
+                ion-col {
+                    align-items: center;
+                    display: flex;
+                    .nama {
+                        font-size: 14px;
+                        color: #f4f5f8;
+                        font-weight: 700;
+                    }
+                    .nim {
+                        font-size: 14px;
+                        color: #f4f5f8;
+                    }
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="login" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-no-margin">
+    <ion-card-header>
+      <ion-card-title>
+        Daftar Akun
+      </ion-card-title>
+      <ion-card-subtitle>
+        isi form dibawah ini untuk membuat akun
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input name="nim" type="number" placeholder="Masukan NIM" 
+        [(ngModel)]="form.nim"
+        [ngModelOptions]="{standalone: true}">
+          <ion-icon name="person-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="email" type="email" placeholder="Masukan Email" 
+        [(ngModel)]="form.email"
+        [ngModelOptions]="{standalone: true}">
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="password" type="password" placeholder="Masukan Password" 
+        [(ngModel)]="form.password"
+        [ngModelOptions]="{standalone: true}">
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-button (click)="doRegister()" expand="block">
+        Daftar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

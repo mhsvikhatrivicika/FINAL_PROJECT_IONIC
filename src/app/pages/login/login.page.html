@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true">
+  <form ngSubmit="login">
+    <div id="container" class="login">
+      <ion-img src="/assets/img/logo.png" alt="logo" class="logo"></ion-img>
+      <ion-input
+        [(ngModel)]="form.email"
+        [ngModelOptions]="{standalone: true}"
+        label="Email"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Email"
+        type="email"
+      ></ion-input>
+
+      <br />
+
+      <ion-input
+        [(ngModel)]="form.password"
+        [ngModelOptions]="{standalone: true}"
+        label="Password"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Password"
+        type="password"
+      >
+        <!-- <ion-icon 
+        [name]="showPassword ? 'eye' : 'eye-off'"
+        slot="end" class="password-icon"
+        (click)="togglePasswordVisibility()"></ion-icon>-->
+      </ion-input>
+      <div class="sign-up ion-text-end">
+        <p>Belum Punya Akun? <a (click)="signup()">Daftar</a></p>
+      </div>
+      <ion-button expand="block" (click)="doSubmitWithValidateFormInput()">
+        Login</ion-button
+      >
+    </div>
+  </form>
+</ion-content>

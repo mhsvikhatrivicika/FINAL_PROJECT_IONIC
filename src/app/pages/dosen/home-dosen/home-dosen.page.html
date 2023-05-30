@@ -1,0 +1,23 @@
+<ion-header class="ion-no-border" [translucent]="true" *ngIf="profil">
+  <ion-toolbar>
+    <ion-title>Halo, {{ profil.name_tmu }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="linear-gradient">
+  </div>
+  <ion-card color="light" class="bg-image">
+    <!-- <img src="../../../../assets/img/scan.png" alt=""> -->
+    <ion-card-content>
+      <p>
+        Scan Kode QR Untuk Melakukan Absensi
+      </p>
+      <ion-button (click)="scan()">
+        Scan
+        <ion-icon name="scan-outline">
+        </ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

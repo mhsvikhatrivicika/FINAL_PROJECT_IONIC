@@ -1,0 +1,186 @@
+<ion-header>
+  <ion-item color="tertiary">
+    <ion-buttons fill="clear" slot="start" color="light">
+      <ion-back-button
+        icon="caret-back"
+        defaultHref="/tabs-mahasiswa/profil-mahasiswa/pengaturan-akun-mahasiswa"
+      ></ion-back-button>
+      Profil Saya
+    </ion-buttons>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="body">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">akun</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-list *ngIf="profil">
+    <!-- <ion-item-group class="avatar">
+        <img alt="Silhouette of a person's head" src="assets/img/foto.jpeg"/>
+    </ion-item-group> -->
+
+    <ion-item-group>
+      <ion-item>
+        <ion-input
+          type="text"
+          [readonly]="true"
+          label="NIM"
+          label-placement="stacked"
+          placeholder="{{ profil.number_id_tmu}}"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          type="text"
+          label="Nama"
+          label-placement="stacked"
+          placeholder="Masukan Nama Anda"
+          value="{{ profil.name_tmu }}"
+          [(ngModel)]="profil.name_tmu"
+          [ngModelOptions]="{standalone: true}"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          type="text"
+          label="Kelas"
+          label-placement="stacked"
+          placeholder="Masukan Kelas"
+          value="{{ profil.class_tmu }}"
+          [(ngModel)]="profil.class_tmu"
+          [ngModelOptions]="{standalone: true}"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-select
+          placeholder="Pilih Program Studi"
+          value="{{ profil.study_program_tmu }}"
+          label-placement="stacked"
+          label="Program Studi"
+          [(ngModel)]="profil.study_program_tmu"
+          [ngModelOptions]="{standalone: true}"
+        >
+          <ion-select-option value="Manajemen">Manajemen</ion-select-option>
+          <ion-select-option value="Akutansi">Akutansi</ion-select-option>
+          <ion-select-option value="Pendidikan Pancasila dan Kewarganegaraan"
+            >Pendidikan Pancasila dan Kewarganegaraan</ion-select-option
+          >
+          <ion-select-option value="Pendidikan Agama Islam"
+            >Pendidikan Agama Islam</ion-select-option
+          >
+          <ion-select-option value="Ilmu Hukum">Ilmu Hukum</ion-select-option>
+          <ion-select-option value="Tehnik Informatika"
+            >Tehnik Informatika</ion-select-option
+          >
+          <ion-select-option value="Sistem Informasi"
+            >Sistem Informasi</ion-select-option
+          >
+          <ion-select-option value="Tehnik Industri"
+            >Tehnik Industri</ion-select-option
+          >
+          <ion-select-option value="Tehnik Mesin"
+            >Tehnik Mesin</ion-select-option
+          >
+          <ion-select-option value="Psikologi">Psikologi</ion-select-option>
+          <ion-select-option value="Farmasi">Farmasi</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-select
+          placeholder="Pilih Fakultas"
+          value="{{ profil.faculty_tmu }}"
+          label-placement="stacked"
+          label="Fakultas"
+          [(ngModel)]="profil.faculty_tmu"
+          [ngModelOptions]="{standalone: true}"
+        >
+          <ion-select-option value="Fakultas Ekonomi dan Bisnis"
+            >Fakultas Ekonomi dan Bisnis</ion-select-option
+          >
+          <ion-select-option value="Fakultas Keguruan & Ilmu Pendidikan"
+            >Fakultas Keguruan & Ilmu Pendidikan</ion-select-option
+          >
+          <ion-select-option value="Fakultas Hukum"
+            >Fakultas Hukum</ion-select-option
+          >
+          <ion-select-option value="Fakultas Ilmu Komputer"
+            >Fakultas Ilmu Komputer</ion-select-option
+          >
+          <ion-select-option value="Fakultas Tehnik"
+            >Fakultas Tehnik</ion-select-option
+          >
+          <ion-select-option value="Fakultas Psikologi"
+            >Fakultas Psikologi</ion-select-option
+          >
+          <ion-select-option value="Fakultas Farmasi"
+            >Fakultas Farmasi</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          type="text"
+          label="Tempat Lahir"
+          label-placement="stacked"
+          placeholder="Masukan Tempat Lahir"
+          value="{{ profil.place_of_birth_tmu }}"
+          [(ngModel)]="profil.place_of_birth_tmu"
+          [ngModelOptions]="{standalone: true}"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          type="date"
+          label="Tanggal Lahir"
+          label-placement="stacked"
+          value="{{ profil.date_of_birth_tmu }}"
+          [(ngModel)]="profil.date_of_birth_tmu"
+          [ngModelOptions]="{standalone: true}"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          type="text"
+          label="Nomor Handphone"
+          label-placement="stacked"
+          placeholder="Masukan Nomor Handphone"
+          value="{{ profil.handphone_tmu}}"
+          [(ngModel)]="profil.handphone_tmu"
+          [ngModelOptions]="{standalone: true}"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          type="text"
+          [readonly]="true"
+          label="Email"
+          label-placement="stacked"
+          placeholder="{{ profil.email_tmu}}"
+        ></ion-input>
+      </ion-item>
+
+      <!-- <ion-item>
+        <ion-input
+          type="file"
+          label="Foto"
+          label-placement="stacked"
+          placeholder="Masukan Foto"
+          value="{{ profil.handphone_tmu}}"
+          [(ngModel)]="form.photo"
+          [ngModelOptions]="{standalone: true}"
+        ></ion-input>
+      </ion-item> -->
+    </ion-item-group>
+  </ion-list>
+</ion-content>
+
+<ion-footer class="save">
+  <ion-toolbar>
+    <ion-button (click)="doUpdateProfil()" color="primary">
+      Simpan
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,7 @@
+{
+  "name": "finalProject-kel3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

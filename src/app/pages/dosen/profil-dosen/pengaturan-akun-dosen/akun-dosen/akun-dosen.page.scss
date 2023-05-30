@@ -1,0 +1,39 @@
+ion-content {
+    ion-list {
+        .avatar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                height: 125px;
+                width: 125px;
+                border-radius: 50%;
+                border: 2px solid #ffff;
+            }
+        }
+        ion-item-group {
+            margin: 0 0 5% 0;
+            // ion-avatar {
+            //     display: block;
+            //     align-items: center;
+            //     img {
+                    
+            //         left: 0;
+            //         right: 0;
+            //         margin: auto;
+            //         align-items: center;
+            //     }
+            // }
+            ion-item {
+                .custom-label {
+                    padding-left: 0;
+                    align-self: flex-start;
+                }
+                ion-label {
+                    font-weight: 300;
+                    padding-left: 5%;
+                }
+            }
+        }
+    }
+}

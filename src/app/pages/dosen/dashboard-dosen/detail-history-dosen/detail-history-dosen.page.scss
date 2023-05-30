@@ -1,0 +1,25 @@
+ion-content {
+    // .bg-image {
+    //     background: url('../../../../assets/img/background-biru.jpg');
+    //     -webkit-background-size: cover;
+    //     -moz-background-size: cover;
+    //     background-size: cover;
+    // }
+    ion-card {
+        ion-button {
+            display: block;
+            font-weight: 700;
+        }
+        ion-grid {
+            padding: 0;
+            ion-col {
+                padding: 2px;
+                // background-color: #135d54;
+                border: none;
+                color: var(--ion-color-dark);
+                display: flex;
+                font-size: 14px;
+            }
+        }
+    }
+}

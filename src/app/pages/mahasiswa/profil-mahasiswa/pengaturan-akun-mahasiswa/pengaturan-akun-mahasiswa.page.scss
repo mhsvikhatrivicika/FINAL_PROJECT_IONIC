@@ -1,0 +1,14 @@
+ion-content {
+    ion-list {
+        margin: 2% 0 0 0;
+        ion-item-group {
+            margin: 0 0 5% 0;
+            ion-item {
+                ion-label {
+                    font-weight: 300;
+                    padding-left: 5%;
+                }
+            }
+        }
+    }
+}
