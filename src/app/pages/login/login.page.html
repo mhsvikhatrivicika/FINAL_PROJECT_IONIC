@@ -2,35 +2,32 @@
   <form ngSubmit="login">
     <div id="container" class="login">
       <ion-img src="/assets/img/logo.png" alt="logo" class="logo"></ion-img>
-      <ion-input
-        [(ngModel)]="form.email"
-        [ngModelOptions]="{standalone: true}"
-        label="Email"
-        label-placement="floating"
-        fill="outline"
-        placeholder="Email"
-        type="email"
-      ></ion-input>
-
-      <br />
-
-      <ion-input
-        [(ngModel)]="form.password"
-        [ngModelOptions]="{standalone: true}"
-        label="Password"
-        label-placement="floating"
-        fill="outline"
-        placeholder="Password"
-        type="password"
-      >
-        <!-- <ion-icon 
-        [name]="showPassword ? 'eye' : 'eye-off'"
-        slot="end" class="password-icon"
-        (click)="togglePasswordVisibility()"></ion-icon>-->
-      </ion-input>
-      <div class="sign-up ion-text-end">
-        <p>Belum Punya Akun? <a (click)="signup()">Daftar</a></p>
-      </div>
+      <ion-item>
+        <ion-input
+          [(ngModel)]="form.email"
+          [ngModelOptions]="{standalone: true}"
+          placeholder="Email"
+          type="email">
+          <ion-icon name="mail-outline"></ion-icon></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          [(ngModel)]="form.password"
+          [ngModelOptions]="{standalone: true}"
+          placeholder="Password"
+          type="password">
+          <ion-icon slot="start" name="key-outline"></ion-icon>
+          <!-- <ion-icon 
+            [name]="showPassword ? 'eye' : 'eye-off'"
+            slot="end" class="password-icon"
+            (click)="togglePasswordVisibility()"></ion-icon>-->
+          </ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label slot="end">
+            Belum Punya Akun? <a (click)="signup()">Daftar</a>
+          </ion-label>
+        </ion-item>
       <ion-button expand="block" (click)="doSubmitWithValidateFormInput()">
         Login</ion-button
       >

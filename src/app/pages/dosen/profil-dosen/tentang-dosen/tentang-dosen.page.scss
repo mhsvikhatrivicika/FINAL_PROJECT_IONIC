@@ -1,6 +1,13 @@
+ion-item {
+    ion-label {
+        white-space: normal;
+        padding-left: 5%;
+    }
+}
 ion-accordion {
     ion-item {
         ion-label {
+            white-space: normal;
             padding-left: 5%;
         }
     }

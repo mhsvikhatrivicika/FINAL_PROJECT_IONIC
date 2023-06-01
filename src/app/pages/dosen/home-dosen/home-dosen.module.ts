@@ -7,14 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { HomeDosenPageRoutingModule } from './home-dosen-routing.module';
 
 import { HomeDosenPage } from './home-dosen.page';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomeDosenPageRoutingModule
+    HomeDosenPageRoutingModule,
   ],
-  declarations: [HomeDosenPage]
+  declarations: [HomeDosenPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomeDosenPageModule {}

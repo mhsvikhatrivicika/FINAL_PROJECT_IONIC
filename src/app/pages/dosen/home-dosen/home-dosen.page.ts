@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiServiceService } from 'src/app/api/api-service.service';
+import { Swiper } from 'swiper';
 
 @Component({
   selector: 'app-home-dosen',
@@ -9,8 +10,21 @@ import { ApiServiceService } from 'src/app/api/api-service.service';
 })
 export class HomeDosenPage implements OnInit {
   profil: any;
+  @ViewChild('swiper')
+  swiperRef: ElementRef | undefined;
+  swiper?: Swiper;
 
-  constructor(private router: Router, private api: ApiServiceService) {}
+
+  constructor(
+    private router: Router,
+    private api: ApiServiceService) {}
+
+  swiperReady() {
+    this.swiper = this.swiperRef?.nativeElement.swiper;
+  }
+  swiperSlideChanged(e: any) {
+    console.log('changed: ', e);
+  }
 
   scan() {
     this.router.navigateByUrl('tabs-dosen/scan-dosen'); // Ganti '/home' dengan rute halaman tujuan setelah login

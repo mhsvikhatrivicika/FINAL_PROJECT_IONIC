@@ -1,15 +1,15 @@
 <ion-header class="ion-no-border" [translucent]="true" *ngIf="profil">
   <ion-toolbar>
-    <ion-title>Halo, {{ profil.name_tmu }}</ion-title>
+    <ion-title>Halo, <strong><span style="text-transform: uppercase;">{{ profil.name_tmu }}</span></strong></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" scrollY="false">
   <div class="linear-gradient">
   </div>
   <ion-card color="light" class="bg-image">
     <!-- <img src="../../../../assets/img/scan.png" alt=""> -->
-    <ion-card-content>
+    <ion-card-content class="content-image">
       <p>
         Scan Kode QR Untuk Melakukan Absensi
       </p>
@@ -20,4 +20,29 @@
       </ion-button>
     </ion-card-content>
   </ion-card>
+  
+  <swiper-container
+  #swiper
+  [pagination]="true"
+  (afterinit)="swiperReady()"
+  (slidechange)="swiperSlideChanged($event)"
+  [loop]="true"
+  >
+    <swiper-slide>
+      <img src="./../../../../assets/img/1-gedung.jpg" alt="">
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./../../../../assets/img/2-gedung.jpg" alt="">
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./../../../../assets/img/3-gedung.jpg" alt="">
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./../../../../assets/img/4-gedung.jpg" alt="">
+    </swiper-slide>
+    <swiper-slide>
+      <img src="./../../../../assets/img/5-gedung.jpg" alt="">
+    </swiper-slide>
+  </swiper-container>
+
 </ion-content>

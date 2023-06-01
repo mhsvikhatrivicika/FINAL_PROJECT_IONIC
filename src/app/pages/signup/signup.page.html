@@ -36,8 +36,11 @@
         <ion-input name="password" type="password" placeholder="Masukan Password" 
         [(ngModel)]="form.password"
         [ngModelOptions]="{standalone: true}">
-          <ion-icon name="mail-outline"></ion-icon>
+        <ion-icon slot="start" name="key-outline"></ion-icon>
         </ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label slot="end">Sudah Punya Akun? <a (click)="doLogin()">Login</a></ion-label>
       </ion-item>
       <ion-button (click)="doRegister()" expand="block">
         Daftar</ion-button>

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
-import { ApiServiceService } from '../../../api/api-service.service';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiServiceService } from 'src/app/api/api-service.service';
+import { Swiper } from 'swiper';
 
 @Component({
   selector: 'app-home-mahasiswa',
@@ -10,12 +10,23 @@ import { Router } from '@angular/router';
 })
 export class HomeMahasiswaPage implements OnInit {
   profil: any;
+  @ViewChild('swiper')
+  swiperRef: ElementRef | undefined;
+  swiper?: Swiper;
 
   constructor(
     private api: ApiServiceService,
-    private router : Router,) { }
+    private router : Router) { }
 
-  ngOnInit() {
+  swiperReady() {
+    this.swiper = this.swiperRef?.nativeElement.swiper;
+  }
+  swiperSlideChanged(e: any) {
+    console.log('changed: ', e);
+  }
+  
+  onScan(){
+    this.router.navigateByUrl('tabs-mahasiswa/scan-mahasiswa');
   }
   
 
@@ -34,8 +45,8 @@ export class HomeMahasiswaPage implements OnInit {
     }
   }
 
-  onScan(){
-    this.router.navigateByUrl('tabs-mahasiswa/scan-mahasiswa');
-  }
+  
 
+  ngOnInit() {
+  }
 }

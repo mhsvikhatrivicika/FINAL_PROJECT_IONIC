@@ -1,35 +1,45 @@
 <ion-header>
-  <ion-item color="tertiary">
+  <ion-toolbar>
     <ion-buttons fill="clear" slot="start" color="light">
-      <ion-back-button icon="caret-back" defaultHref="/tabs-dosen/profil-dosen"></ion-back-button>
+      <ion-back-button defaultHref="/tabs-dosen/profil-dosen/pengaturan-akun-dosen"></ion-back-button>
       Tentang Aplikasi
     </ion-buttons>
-  </ion-item>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="body">
-  <ion-accordion-group [multiple]="true">
-  <ion-accordion value="first">
-    <ion-item slot="header" color="light">
-      <ion-icon name="call-outline"></ion-icon>
-      <ion-label>
-        Kontak Kami</ion-label>
-    </ion-item>
-    <div class="ion-padding" slot="content">
-      Jika Anda mengalami kendala atau ada pertanyaan lainnya terkait penggunaan aplikasi Presensi Praktikum, Anda bisa menghubungi ke:
-    <br>
-    <br>
-    Email: ilyasalhasimm@gmail.com
-    <br>
-    WhatsApp : +62 897-7050-510
-    </div>
-  </ion-accordion>
-  <ion-accordion value="second">
-    <ion-item slot="header" color="light">
-      <ion-icon name="phone-portrait-outline"></ion-icon>
-      <ion-label>Versi Aplikasi</ion-label>
-    </ion-item>
-    <div class="ion-padding" slot="content">Ini adalah versi Aplikasi Pertama</div>
-  </ion-accordion>
-</ion-accordion-group>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        <ion-label>
+          Tentang</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate saepe sed fuga ipsum atque?
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-icon name="call-outline"></ion-icon>
+        <ion-label>
+          Kontak Kami</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Jika Anda mengalami kendala atau ada pertanyaan lainnya terkait penggunaan aplikasi Presensi Praktikum, Anda bisa menghubungi ke:
+      <br>
+      <br>
+      Email: ilyasalhasimm@gmail.com
+      <br>
+      WhatsApp : +62 897-7050-510
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-icon name="phone-portrait-outline"></ion-icon>
+        <ion-label>Versi Aplikasi</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Ini adalah versi Aplikasi Pertama</div>
+    </ion-accordion>
+  </ion-accordion-group>
 </ion-content>

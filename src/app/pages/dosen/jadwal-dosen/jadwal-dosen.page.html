@@ -1,14 +1,14 @@
 <ion-header>
-  <ion-item color="tertiary">
-    <ion-buttons fill="clear" slot="start" color="light">
+  <ion-toolbar>
+    <ion-buttons class="ion-padding" fill="clear" slot="start" color="light">
       Jadwal
     </ion-buttons>
-  </ion-item>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content class="body" [fullscreen]="true">
 
-  <ion-card *ngFor="let key of jadwal" class="bg-image" color="secondary">
+  <ion-card *ngFor="let key of jadwal" class="bg-image" color="light">
     <ion-card-content>
       <ion-grid>
         <ion-row>

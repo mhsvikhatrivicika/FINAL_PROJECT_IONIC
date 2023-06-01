@@ -1,31 +1,25 @@
 <ion-header>
-  <ion-item color="tertiary">
+  <ion-toolbar>
     <ion-buttons fill="clear" slot="start" color="light">
-      <ion-back-button icon="caret-back" defaultHref="/tabs-dosen/profil-dosen"></ion-back-button>
+      <ion-back-button defaultHref="/tabs-dosen/profil-dosen/pengaturan-akun-dosen"></ion-back-button>
       Bantuan
     </ion-buttons>
-  </ion-item>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="body">
   <ion-accordion-group>
     <ion-accordion value="first">
-      <ion-item slot="header">
+      <ion-item slot="header" color="light">
         <ion-label>Bagaimana Melakukan Presensi?</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">Pada halaman beranda klik icon <ion-icon name="scan-outline"></ion-icon> maka akan menampilkan kamera dan arahkan kamera ke kode QR yang disediakan oleh dosen.</div>
     </ion-accordion>
     <ion-accordion value="second">
-      <ion-item slot="header">
+      <ion-item slot="header" color="light">
         <ion-label>Bagaimana melihat riwayat bahwa telah melakukan presensi?</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">Klik riwayat pada tabs untuk melihat riwayat presensi</div>
-    </ion-accordion>
-    <ion-accordion value="third">
-      <ion-item slot="header">
-        <ion-label>Third Accordion</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Third Content</div>
     </ion-accordion>
   </ion-accordion-group>
 </ion-content>

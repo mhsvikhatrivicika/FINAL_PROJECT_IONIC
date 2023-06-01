@@ -13,10 +13,10 @@ export class PengaturanAkunMahasiswaPage implements OnInit {
   ) { }
 
   profilM() {
-    this.router.navigateByUrl('tabs-mahasiswa/profil-mahasiswa/pengaturan-akun-mahasiswa/akun-mahasiswa')
+    this.router.navigateByUrl('/profil-mahasiswa/pengaturan-akun-mahasiswa/akun-mahasiswa')
   }
   gPasswordM() {
-    this.router.navigateByUrl('tabs-mahasiswa/profil-mahasiswa/pengaturan-akun-mahasiswa/ganti-password-mahasiswa')
+    this.router.navigateByUrl('/profil-mahasiswa/pengaturan-akun-mahasiswa/ganti-password-mahasiswa')
   }
 
   ngOnInit() {

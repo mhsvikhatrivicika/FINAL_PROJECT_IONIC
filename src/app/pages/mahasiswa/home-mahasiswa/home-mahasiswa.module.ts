@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { HomeMahasiswaPageRoutingModule } from './home-mahasiswa-routing.module';
 
 import { HomeMahasiswaPage } from './home-mahasiswa.page';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +15,7 @@ import { HomeMahasiswaPage } from './home-mahasiswa.page';
     IonicModule,
     HomeMahasiswaPageRoutingModule
   ],
-  declarations: [HomeMahasiswaPage]
+  declarations: [HomeMahasiswaPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomeMahasiswaPageModule {}

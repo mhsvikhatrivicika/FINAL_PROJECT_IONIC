@@ -14,10 +14,10 @@ export class PengaturanAkunDosenPage implements OnInit {
   ) { }
 
   profilD() {
-    this.router.navigateByUrl('tabs-dosen/profil-dosen/pengaturan-akun-dosen/akun-dosen')
+    this.router.navigateByUrl('/profil-dosen/pengaturan-akun-dosen/akun-dosen')
   }
   gPasswordD() {
-    this.router.navigateByUrl('tabs-dosen/profil-dosen/pengaturan-akun-dosen/ganti-password-dosen')
+    this.router.navigateByUrl('/profil-dosen/pengaturan-akun-dosen/ganti-password-dosen')
   }
 
   ngOnInit() {

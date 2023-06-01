@@ -22,7 +22,7 @@ export class AkunDosenPage implements OnInit {
   ) {}
 
   profilM() {
-    this.router.navigateByUrl('/tabs-dosen/profil-dosen/pengaturan-akun-dosen')
+    this.router.navigateByUrl('/profil-dosen/pengaturan-akun-dosen')
   }
 
   ngOnInit() {}
